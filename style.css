@@ -1,0 +1,189 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.hotel, .contacting{
+  background-color: #a6ef4e;
+  text-align: center;
+  border-radius: 10px;
+  border-color: #b5b5b5;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
+}
+.hotel:hover, .contacting:hover{
+  background-color: #a6ef4e;
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #232323;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  transform: scale(1.1);
+  animation: hover 2s alternate infinite;
+
+}
+.bleh{
+  color: #000000;;
+}
+.uhoh{
+  background-color: #fec700;
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #7a4a00;
+  border-style: dashed;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+}
+.venues{
+  background-color: #a6ef4e;
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #b5b5b5;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+}
+.venues:hover{
+  background-color: #a6ef4e;
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #232323;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  animation: hover 2s alternate infinite;
+  transition: animation .2s ease-in-out;
+}
+@keyframes hover{
+  0%{font-size: 1.2em;}
+  100%{transform: scale(1.1);
+       transition: transform .2s;
+      font-size: 1.2em;}
+}
+.party:hover{
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #232323;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  transform: scale(1.1);
+  transition: transform .2s;
+  animation: party .5s alternate infinite;
+}
+@keyframes party{
+  0%{background-color:white;}
+  100%{background-color:#0056d6;
+      font-size: 1.2em;}
+}
+.info {
+  margin-top: 100px;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+
+}
+
+h1 {
+
+  color: #a6ef4e;
+  font-size: 50px;
+  margin-bottom: 2em;
+       
+}
+
+h2 {
+  color: black;
+  font-size: 2em;
+}
+
+h3 {
+  color: black;
+}
+.venText{
+  color: black;
+}
+h4 {
+  color: black;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  background-color: #a6ef4e;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.downNav {
+  background-image: url('caution-tape.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.down{
+  color: #fffc41;
+  font-size: 50px;
+  margin-bottom: 2em;
+}
+li {
+  display: inline;
+  background-color: #b5b5b5;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+
+}
+
+
+.link {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+}
