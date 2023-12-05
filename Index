@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=.65">
+
+  <title>Joshua Sambol</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>
+        <a href="index.html">
+          <img src="Logo.png" alt="Joshua Sambol" class="logo">
+        </a>
+      </h1>
+      <div class="nav">
+        <ul>
+          <b>
+            <li class="hotels"><a class="link" href="hotel.html">Hotels</a></li>
+            <li class="venue"><a class="link" href="venue.html">Venue</a></li>
+            <li class="contact"><a class="link" href="contact.html">Contact</a></li>
+            <li class="info"><a class="link" href="info.html">Other Info</a></li>
+          </b>
+        </ul>
+      </div>
+    </div>
+</body>
+
+</html>
