@@ -16,19 +16,31 @@ html {
   transform: scale(1);
   transition: transform 1s ease-in-out;
 }
-@media (max-width: 5000px) {
-  .inv{
-  background-color: rgb(19, 19, 19);
-  color:silver;
-  border-radius: 7px;
-  border-color: #ffffff;
-  border-width: 5px;
+
+.QnA{
+  background-color: #a6ef4e;
+  text-align: center;
+  border-radius: 10px;
+  border-color: #b5b5b5;
   border-style: solid;
-  height: 1em;
-  width: 10px;
-  margin-left:auto;
-  margin-right: auto;
-  }
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  transform: scale(1);
+  transition: transform 1s ease-in-out;
+}
+.QnA:hover{
+  background-color: #a6ef4e;
+  text-align: center;
+  color:black;
+  border-radius: 10px;
+  border-color: #232323;
+  border-style: solid;
+  border-width: 10px;
+  padding: 10px;
+  margin: 30px;
+  transform: scale(1.1);
+  animation: hover 2s alternate infinite;
 }
 .contacting:hover{
   background-color: #a6ef4e;
@@ -71,6 +83,10 @@ html {
   padding: 10px;
   margin: 30px;
 }
+.urInv{
+  height: 15%;
+  width: 45%;
+}
 .venues{
   background-color: #a6ef4e;
   text-align: center;
@@ -84,16 +100,22 @@ html {
   
 }
 .inv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(19, 19, 19);
   color:silver;
   border-radius: 7px;
   border-color: #a6ef4e;
   border-width: 5px;
   border-style: solid;
-  height: 25em;
-  width: 55em;
+  font-size: 40px;
+  height: 75%;
+  width: 55%;
   margin-left:auto;
   margin-right: auto;
+  box-shadow: 5px 20px 20px rgb(151, 151, 151);
 } 
 .pooka{
   color:silver;
@@ -106,10 +128,14 @@ html {
 .ok{
   background-color: #7a7a7a;
   border-radius: 20px;
-  height: 2.5em;
-  width: 5.5em;
+  height: 3em;
+  width: 6em;
+  box-shadow: 0px 5px 5px rgb(68, 68, 68);
 }
-
+footer{
+  background-color: #b5b5b5;
+  bottom: 0px;
+}
 .venues:hover{
   background-color: #a6ef4e;
   text-align: center;
