@@ -84,8 +84,9 @@ html {
   margin: 30px;
 }
 .urInv{
-  height: 15%;
-  width: 45%;
+  height: 50%;
+  width: 80%;
+  color:silver
 }
 .venues{
   background-color: #a6ef4e;
@@ -110,16 +111,18 @@ html {
   border-color: #a6ef4e;
   border-width: 5px;
   border-style: solid;
-  font-size: 40px;
-  height: 75%;
-  width: 55%;
+  font-size: ;
+  height: 55%;
+  width: 75%;
+  margin-bottom: 20%;
   margin-left:auto;
   margin-right: auto;
   box-shadow: 5px 20px 20px rgb(151, 151, 151);
 } 
 .pooka{
   color:silver;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  margin-bottom: 10%;
 }
 .date{
   color:silver;
