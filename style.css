@@ -29,6 +29,13 @@ html {
   transform: scale(1);
   transition: transform 1s ease-in-out;
 }
+.ps{
+  margin: 4em;
+  transform: scale(2);
+}
+.enter{
+  transform: scale(1.5);
+}
 .QnA:hover{
   background-color: #a6ef4e;
   text-align: center;
