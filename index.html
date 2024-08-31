@@ -5,22 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <button class='homeButton'>Home</button>
+        <button class='projectButton'>Projects</button>
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="JoshSambol" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
         <a href="#" id="dark-mode-toggle"><img src="darkLight.svg"></a>
     </nav>
-    <main>
-        <h1>Welcome to My Website</h1>
-        <p>This is the home page. Feel free to explore!</p>
+
+
+    <div class="home">
+        <main>
+            <h1>Welcome to My Website</h1>
+            <p>This is the home page. Feel free to explore!</p>
+            <div class="scroll">
+                <h1>Scroll1</h1>
+            </div>
+
+            <div class="scroll">
+                <h1>Scroll2</h1>
+            </div>
+
+            <div class="scroll">
+                <h1>Scroll3</h1>
+            </div>
+            
+            <div class="scroll">
+                <h1>Scroll4</h1>
+            </div>
+        </main>
+    </div>
+    
+
+
+
+    <div class="projects">
+        <main>
+        <h1>My Projects</h1>
+        <ul>
+            <li>Project</li>
+            <li>Project</li>
+            <li>Project</li>
+        </ul>
     </main>
-    <script src="script.js">
-        document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+    </div>
 </body>
 </html>
 

@@ -7,7 +7,21 @@ body {
     line-height: 1.6;
     font-size: 1rem; /* Responsive font size */
 }
-
+html {
+    scroll-behavior: smooth;
+  }
+.scroll{
+    opacity: 0;
+    margin: 10rem;
+    transform: translateX(-100px);
+    transition: all 1s ease-in-out;
+    }
+    
+    .scroll.visible {
+    opacity: 1;
+    transform:translateX(0px);
+    }
+      
 nav {
     background-color: #333;
     color: #fff;
@@ -18,14 +32,29 @@ nav {
     align-items: center;
 }
 
-nav a {
+nav button{
     color: #fff;
-    text-decoration: none;
     font-size: 1rem;
+    border-radius:9px;
+    border: #000 2px solid;
+    height: 3rem;
+    width:7rem;
+    background-color: #4d4d4d;
+    transition: all .2s ease-in-out;
+    
 }
-
-nav a:hover {
-    text-decoration: underline;
+.projects{
+    display:none
+}
+nav button:hover {
+    height:3.5rem;
+    width:8rem;
+    border-radius: 100px;
+    background-color: #777777;
+}
+nav button:active{
+    background-color: #fff;
+    border-radius:20px;
 }
 
 main {
@@ -33,7 +62,7 @@ main {
 }
 
 .dark-mode {
-    background-color: #121212;
+    background-color: #323232;
     color: #e0e0e0;
 }
 
@@ -42,7 +71,7 @@ main {
 }
 
 .dark-mode nav a {
-    color: #e0e0e0;
+    color: #000000;
 }
 
 .dark-mode nav a:hover {
