@@ -82,7 +82,39 @@ main{
     left: 100%; /* Ensure it stays immediately to the right of the original letter */
     top: 0; /* Align vertically with the original letter */
 }
+main {
+    width: 300px;
+    height: 200px;
+    background-color: #d0eaff;
+    overflow: hidden;
+    animation: tv-on 2s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
+@keyframes tv-on {
+    0% {
+        height: 0;
+        width: 100%;
+    }
+    
+    50% {
+        height: 100%;
+        width: 5px;
+    }
+    70% {
+        height: 100%;
+        width: 100%;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+    }
+}
 
 html {
     scroll-behavior: smooth;
