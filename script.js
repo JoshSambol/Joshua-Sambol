@@ -5,8 +5,16 @@ const projectButton = document.querySelector('.projectButton')
 const home = document.querySelector('.home')
 const projects = document.querySelector('.projects')
 
-// JavaScript to add the 'visible' class when elements are in view
 const scroll = document.querySelectorAll('.scroll');
+
+const circle = document.createElement('div');
+circle.classList.add('cursor-circle');
+document.body.appendChild(circle);
+
+document.addEventListener('mousemove', (e) => {
+    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY}px`;
+});
 
 function checkVisibility() {
   const windowHeight = window.innerHeight;

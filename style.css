@@ -1,14 +1,92 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    background-color: #d0eaff;
     color: #000;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 1s, color 1s;
     line-height: 1.6;
+    cursor:none;
     font-size: 1rem; /* Responsive font size */
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.js{
+    font-family: 'cookie';
+    display:inline;
+    margin:0px;
+}
+
+.stay{
+    color: #fff;
+    padding:0px;
+    background-color: #000;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.scrolling{
+
+    animation: 10s scrolling linear infinite;
+}
+@keyframes scrolling{
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(100%);}
+}
+.cursor-circle {
+    position: fixed; /* Fixed position to stay in the viewport */
+    width: 20px; /* Size of the circle */
+    height: 20px; /* Size of the circle */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #ffffff; /* Circle color */
+    opacity: .7;
+    pointer-events: none; /* Prevent the circle from blocking interactions */
+    transform: translate(-50%, -50%); /* Center the circle on the cursor */
+    transition: background-color 0.3s ease; /* Optional: smooth transition for color change */
+}
+
+.letter {
+    color: #000000;
+    font-size: 10rem; /* Base font size */
+    position: relative;
+    cursor: pointer; /* Use pointer cursor to indicate interactivity */
+    transition: all 0.5s ease-in-out; /* Smooth transition for size change */
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+
+.letter::after {
+    content: attr(data-full);
+    position: absolute;
+    left: 100%; /* Position it immediately to the right of the original letter */
+    top: 0; /* Align vertically with the original letter */
+    font-size: 10rem; /* Same base size as the original letter */
+    white-space: nowrap;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+    color: #000000;
+}
+
+.letter:hover {
+    font-size: 10rem; /* Increase the size of the original letter on hover */
+}
+
+.letter:hover::after {
+    font-size: 10rem; /* Match the size of the hovered letter */
+    opacity: 1;
+    transform: scaleX(1);
+    left: 100%; /* Ensure it stays immediately to the right of the original letter */
+    top: 0; /* Align vertically with the original letter */
+}
+
+
 html {
     scroll-behavior: smooth;
+    cursor: none;
   }
 .scroll{
     opacity: 0;
@@ -21,9 +99,12 @@ html {
     opacity: 1;
     transform:translateX(0px);
     }
-      
+    .welcome{
+        font-size: 7rem;
+        font-family: 'Cookie';
+    }
 nav {
-    background-color: #333;
+    background-color: #A1D5EB;
     color: #fff;
     padding: 1rem;
     display: flex;
@@ -39,7 +120,7 @@ nav button{
     border: #000 2px solid;
     height: 3rem;
     width:7rem;
-    background-color: #4d4d4d;
+    background-color: #7FBED9;
     transition: all .2s ease-in-out;
     
 }
@@ -50,7 +131,7 @@ nav button:hover {
     height:3.5rem;
     width:8rem;
     border-radius: 100px;
-    background-color: #777777;
+    background-color: #B3DFF2;
 }
 nav button:active{
     background-color: #fff;
@@ -61,19 +142,25 @@ main {
     padding: 2rem;
 }
 
-.dark-mode {
-    background-color: #323232;
+.dark-mode main{
+    background-color: #001c30;
     color: #e0e0e0;
 }
 
 .dark-mode nav {
-    background-color: #1f1f1f;
+    background-color: rgb(22, 22, 40);
 }
 
-.dark-mode nav a {
-    color: #000000;
+.dark-mode button {
+    background-color: #001F3F;
+}
+.dark-mode .letter, .js, .letter::after{
+    color: #fff;
 }
 
+.dark-mode button:hover{
+    background-color: #000;
+}
 .dark-mode nav a:hover {
     text-decoration: underline;
 }
