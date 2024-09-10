@@ -26,6 +26,7 @@ main{
     background-color: #000;
     border-radius: 30px;
     overflow: hidden;
+    margin: 2%;
 }
 .scrolling{
 
@@ -68,7 +69,7 @@ main{
     transform: scaleX(0);
     transform-origin: left;
     transition: all 0.5s ease-in-out;
-    color: #000000;
+    color: #000;
 }
 
 .letter:hover {
@@ -81,6 +82,7 @@ main{
     transform: scaleX(1);
     left: 100%; /* Ensure it stays immediately to the right of the original letter */
     top: 0; /* Align vertically with the original letter */
+    color: #000;
 }
 main {
     width: 300px;
@@ -95,6 +97,33 @@ main {
     font-family: Arial, sans-serif;
     text-align: center;
 }
+.about{
+    height:6%;
+    width:100%;
+    font-size: 2.5rem;
+    margin: 0px;
+    transition: all .2s ease-in-out;
+}
+.about:hover{
+    height:5%;
+    width:50%;
+    background-color: #e2f2ff;
+}
+.portfolio{
+    height:6%;
+    width:100%;
+    font-size: 2.5rem;
+    margin: 0px;
+}
+.contact{
+    height:6%;
+    width:100%;
+    font-size: 2.5rem;
+    margin: 0px;
+}
+
+
+
 
 @keyframes tv-on {
     0% {
@@ -186,7 +215,7 @@ main {
 .dark-mode button {
     background-color: #001F3F;
 }
-.dark-mode .letter, .js, .letter::after{
+.dark-mode .letter, .js {
     color: #fff;
 }
 
@@ -199,7 +228,7 @@ main {
 
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; 
+      flex-direction: column;   
     }
     
     nav a {
