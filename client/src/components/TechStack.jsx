@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { Box, Center, Group, ThemeIcon } from '@mantine/core';
+import { Tooltip, Box, Center, Group, ThemeIcon } from '@mantine/core';
 import { IconBrandReact, IconBrandPython, IconBrandHtml5, IconBrandCss3, IconBrandJavascript } from '@tabler/icons-react';
 import FloatingElement from './FloatingElement';
 
 const TechStack = ({ itemVariants }) => {
-  // Array of technology icons with their labels and animation delays
   const technologies = [
     { icon: IconBrandHtml5, label: 'HTML5', delay: 0 },
     { icon: IconBrandCss3, label: 'CSS3', delay: 0.1 },
@@ -14,82 +13,71 @@ const TechStack = ({ itemVariants }) => {
   ];
 
   return (
-    // Main container with fade-in animation
     <motion.div 
       variants={itemVariants}
       initial="hidden"
       animate="visible"
       style={{
         width: '100%',
-        margin: '2rem 0'  // Spacing above and below the tech stack
+        margin: '2rem 0',
       }}
     >
-      {/* Center wrapper for the entire section */}
       <Center style={{ width: '100%' }}>
-        {/* Glass-effect container box */}
         <Box 
           style={{
             position: 'relative',
-            padding: '2rem',  // Internal spacing
+            padding: '2rem',
             borderRadius: '15px',
-            background: 'rgba(0,145,255,0.05)',  // Light blue transparent background
-            backdropFilter: 'blur(10px)',  // Glass effect
+            background: 'rgba(0,145,255,0.05)',
+            backdropFilter: 'blur(10px)',
             width: '100%',
-            maxWidth: '800px',  // Maximum width on large screens
+            maxWidth: '800px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
           }}
         >
-          {/* Group container for the tech icons */}
           <Group 
-            // Spacing between icons at different breakpoints
             gap={{ base: 30, sm: 40, md: 50 }}
             position="center" 
             style={{ 
               width: '100%',
               display: 'flex',
               justifyContent: 'center',
-              flexWrap: 'wrap',  // Allows icons to wrap on smaller screens
+              flexWrap: 'wrap',
               padding: '1rem'
             }}
           >
-            {/* Map through each technology to create icons */}
             {technologies.map((tech) => (
-              // Hover animation wrapper
-              <motion.div
-                key={tech.label}
-                whileHover={{ 
-                  scale: 1.2,  // Grow on hover
-                  rotate: [0, -10, 10, 0],  // Wiggle effect
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                {/* Floating animation wrapper */}
-                <FloatingElement delay={tech.delay}>
-                  {/* Icon container with glass effect */}
-                  <ThemeIcon 
-                    // Icon sizes at different breakpoints:
-                    // xl (extra large screens): 250px
-                    // lg (large screens): 200px
-                    // md (medium screens): 150px
-                    // sm (small screens): 200px
-                    size={{ xl: 250, lg: 200, sm: 200, md: 150}}
-                    variant="light"
-                    style={{ 
-                      boxShadow: '0 0 30px rgba(0,145,255,0.3)',  // Glowing effect
-                      background: 'rgba(0,145,255,0.1)',  // Light blue background
-                      backdropFilter: 'blur(5px)'  // Glass effect
-                    }}
-                  >
-                    {/* The actual tech icon:
-                        base (mobile): 40px
-                        sm (small screens): 100px
-                        md (medium screens): 60px */}
-                    <tech.icon size={{ base: 40, sm: 20, md: 60 }} style={{ color: '#0091FF' }} />
-                  </ThemeIcon>
-                </FloatingElement>
-              </motion.div>
+              <Tooltip key={tech.label} label={tech.label}>
+                <motion.div
+                  whileHover={{ 
+                    scale: 1.2,
+                    rotate: [0, -10, 10, 0], 
+                  }}
+                  transition={{ duration: 0.3 }}
+                  style={{ display: 'inline-block' }} // Prevents layout shifting
+                >
+                  <FloatingElement delay={tech.delay}>
+                    <ThemeIcon
+                      size="5rem"
+                      variant="light"
+                      sx={(theme) => ({
+                        width: theme.fn.size({ base: 100, sm: 60, md: 70 }),
+                        height: theme.fn.size({ base: 'auto' }),
+                        boxShadow: '0 0 20px rgba(0,145,255,0.3)',
+                        background: 'rgba(72, 82, 90, 0.1)',
+                        backdropFilter: 'blur(5px)',
+                      })}
+                    >
+                      <tech.icon
+                        size="4rem"
+                        style={{ color: '#0091FF' }}
+                      />
+                    </ThemeIcon>
+                  </FloatingElement>
+                </motion.div>
+              </Tooltip>
             ))}
           </Group>
         </Box>
@@ -98,4 +86,4 @@ const TechStack = ({ itemVariants }) => {
   );
 };
 
-export default TechStack; 
+export default TechStack;

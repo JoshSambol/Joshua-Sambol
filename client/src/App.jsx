@@ -87,45 +87,7 @@ function App() {
             <Projects itemVariants={itemVariants} />
           </Container>
         </motion.div>
-
-        {/* Animated background elements */}
-        <motion.div
-          animate={{
-            opacity: [0.3, 0.5, 0.3],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          style={{
-            position: 'fixed',
-            top: '20%',
-            left: '10%',
-            width: '40vw',
-            height: '40vw',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0,145,255,0.1) 0%, transparent 70%)',
-            filter: 'blur(40px)',
-            zIndex: 0
-          }}
-        />
-        <motion.div
-          animate={{
-            opacity: [0.2, 0.4, 0.2],
-            scale: [1.2, 1, 1.2],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-          style={{
-            position: 'fixed',
-            bottom: '10%',
-            right: '20%',
-            width: '30vw',
-            height: '30vw',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0,145,255,0.05) 0%, transparent 70%)',
-            filter: 'blur(40px)',
-            zIndex: 0
-          }}
-        />
-      </motion.div>
+        </motion.div>
     </MantineProvider>
   );
 }

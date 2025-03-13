@@ -7,8 +7,8 @@ const Projects = ({ itemVariants }) => {
   const projects = [
     {
       title: "The Coder Fair",
-      description: "A React-based web application created to help organize and manage events for theCoderSchool(Montgomery, NJ)",
-      technologies: ["React", "JavaScript", "Node.js"],
+      description: "A full-stack React-based web application created to help organize and manage events for theCoderSchool(Montgomery, NJ)",
+      technologies: ["React", "JavaScript", "Node.js", "Python"],
       link: "https://coderfair.com"
     },
     {
@@ -57,7 +57,7 @@ const Projects = ({ itemVariants }) => {
                 <motion.div
                   whileHover={{ 
                     scale: 1.05,
-                    rotate: [0, -2, 2, 0],
+                    // rotate: [0, -2, 2, 0],
                     transition: { duration: 0.3 }
                   }}
                 >
@@ -83,10 +83,11 @@ const Projects = ({ itemVariants }) => {
                         {project.title}
                       </Text>
                       <motion.div
-                        whileHover={{ rotate: 90 }}
+                        whileHover={{ scale:1.2 }}
                         transition={{ duration: 0.2 }}
                       >
-                        <IconExternalLink style={{ color: '#0091FF' }} />
+                        <a href={project.link}><IconExternalLink style={{ color: '#0091FF' }}/></a>
+                        
                       </motion.div>
                     </Group>
                     <Text size="sm" mb="md" c="dimmed">
