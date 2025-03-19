@@ -17,7 +17,7 @@ const SubHeader = ({ itemVariants }) => (
           letterSpacing: '0.1em'
         }}
       >
-        Frontend Developer
+        Full-Stack Developer
       </Text>
     </motion.div>
   </Center>
