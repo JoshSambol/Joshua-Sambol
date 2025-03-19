@@ -28,6 +28,12 @@ const Projects = ({ itemVariants }) => {
       description: "A React-based clone of the popular game show Jeopardy",
       technologies: ["React", "Node.js", "JavaScript"],
       link: "https://jeopardy-game-react.netlify.app/"
+    },
+    {
+      title: "OpenBoard",
+      description: "A full stack React+Node.js application that lets you chat on a message board.",
+      technologies: ["React", "Node.js", "JavaScript", "Express", "MongoDB"],
+      link: "https://openboard.joshuasambol.com/"
     }
   ];
 
