@@ -15,7 +15,7 @@ const Projects = ({ itemVariants }) => {
       title: "Sunny Dayz", 
       description: "A web aplication that utilizes an API to fetch weather data for a specific location and display it to the user",
       technologies: ["HTML", "CSS", "JavaScript"],
-      link: "https://replace-this-with-the-actual-link.com"
+      link: "https://sunnydayz.joshuasambol.com"
     },
     {
       title: "Select 100 Lacrosse",
@@ -27,7 +27,7 @@ const Projects = ({ itemVariants }) => {
       title: "Jeopardy",
       description: "A React-based clone of the popular game show Jeopardy",
       technologies: ["React", "Node.js", "JavaScript"],
-      link: "https://jeopardy-game-react.netlify.app/"
+      link: "https://jeopardy.joshuasambol.com/"
     },
     {
       title: "OpenBoard",
