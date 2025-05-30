@@ -78,8 +78,9 @@ const Contact = ({ itemVariants }) => {
           {/* Contact Form */}
           <form 
             name="website-inquiry" 
+            method="POST" 
+            data-netlify="true"
             style={{ maxWidth: '600px', margin: '0 auto' }}
-            netlify
           >
             <input type="hidden" name="form-name" value="website-inquiry" />
             
