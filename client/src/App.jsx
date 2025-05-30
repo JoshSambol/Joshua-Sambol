@@ -11,6 +11,8 @@ import SubHeader from './components/SubHeader';
 import TechStack from './components/TechStack';
 import About from './components/About';
 import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Contact from './components/Contact';
 
 const theme = createTheme({
   colors: {
@@ -85,6 +87,8 @@ function App() {
               <About itemVariants={itemVariants} />
             </Box>
             <Projects itemVariants={itemVariants} />
+            <Achievements itemVariants={itemVariants} />
+            <Contact itemVariants={itemVariants} />
           </Container>
         </motion.div>
         </motion.div>
