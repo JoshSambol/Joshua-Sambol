@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Tooltip, Box, Center, Group, ThemeIcon } from '@mantine/core';
-import { IconBrandReact, IconBrandPython, IconBrandHtml5, IconBrandCss3, IconBrandJavascript } from '@tabler/icons-react';
+import { IconBrandReact, IconBrandPython, IconBrandHtml5, IconBrandCss3, IconBrandJavascript, IconBrandSwift } from '@tabler/icons-react';
 import FloatingElement from './FloatingElement';
 
 const TechStack = ({ itemVariants }) => {
@@ -10,6 +10,7 @@ const TechStack = ({ itemVariants }) => {
     { icon: IconBrandJavascript, label: 'JavaScript', delay: 0.2 },
     { icon: IconBrandReact, label: 'React', delay: 0.3 },
     { icon: IconBrandPython, label: 'Python', delay: 0.4 },
+    { icon: IconBrandSwift, label: 'Swift', delay: 0.5 },
   ];
 
   return (

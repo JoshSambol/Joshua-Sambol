@@ -35,8 +35,8 @@ const About = ({ itemVariants }) => (
         }}
       />
       <Text size="lg" mb={20} style={{ textAlign: 'center', position: 'relative' }}>
-        Passionate about creating beautiful, interactive web experiences with modern technologies.
-        Specializing in frontend development with a focus on React and responsive design.
+        Passionate about creating beautiful, interactive applications with modern technologies.
+        While experienced in both frontend and backend development, I specialize in frontend with a focus on building responsive and user-friendly experiences.
       </Text>
     </motion.div>
   </Center>
