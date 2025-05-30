@@ -50,6 +50,7 @@ const Contact = ({ itemVariants }) => {
                 key={social.label} 
                 href={social.link} 
                 target="_blank"
+                rel="noopener noreferrer"
                 style={{ textDecoration: 'none' }}
               >
                 <motion.div
