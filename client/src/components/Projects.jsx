@@ -11,7 +11,7 @@ const Projects = ({ itemVariants }) => {
     link: "https://github.com/posaune14/yellow_team",
     featured: true,
     status: "In Development",
-    challenge: "Congressional App Challenge 2024"
+    challenge: "Congressional App Challenge 2025"
   };
 
   const projects = [
