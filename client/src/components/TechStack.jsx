@@ -1,16 +1,46 @@
 import { motion } from 'framer-motion';
-import { Tooltip, Box, Center, Group, ThemeIcon } from '@mantine/core';
+import { Tooltip, Box, Center, Group, ThemeIcon, Anchor } from '@mantine/core';
 import { IconBrandReact, IconBrandPython, IconBrandHtml5, IconBrandCss3, IconBrandJavascript, IconBrandSwift } from '@tabler/icons-react';
 import FloatingElement from './FloatingElement';
 
 const TechStack = ({ itemVariants }) => {
   const technologies = [
-    { icon: IconBrandHtml5, label: 'HTML5', delay: 0 },
-    { icon: IconBrandCss3, label: 'CSS3', delay: 0.1 },
-    { icon: IconBrandJavascript, label: 'JavaScript', delay: 0.2 },
-    { icon: IconBrandReact, label: 'React', delay: 0.3 },
-    { icon: IconBrandPython, label: 'Python', delay: 0.4 },
-    { icon: IconBrandSwift, label: 'Swift', delay: 0.5 },
+    { 
+      icon: IconBrandHtml5, 
+      label: 'HTML5', 
+      delay: 0,
+      link: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+    },
+    { 
+      icon: IconBrandCss3, 
+      label: 'CSS3', 
+      delay: 0.1,
+      link: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+    },
+    { 
+      icon: IconBrandJavascript, 
+      label: 'JavaScript', 
+      delay: 0.2,
+      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+    },
+    { 
+      icon: IconBrandReact, 
+      label: 'React', 
+      delay: 0.3,
+      link: 'https://react.dev/'
+    },
+    { 
+      icon: IconBrandPython, 
+      label: 'Python', 
+      delay: 0.4,
+      link: 'https://docs.python.org/3/'
+    },
+    { 
+      icon: IconBrandSwift, 
+      label: 'Swift', 
+      delay: 0.5,
+      link: 'https://docs.swift.org/swift-book/'
+    },
   ];
 
   return (
@@ -51,33 +81,44 @@ const TechStack = ({ itemVariants }) => {
           >
             {technologies.map((tech) => (
               <Tooltip key={tech.label} label={tech.label}>
-                <motion.div
-                  whileHover={{ 
-                    scale: 1.2,
-                    rotate: [0, -10, 10, 0], 
-                  }}
-                  transition={{ duration: 0.3 }}
-                  style={{ display: 'inline-block' }} // Prevents layout shifting
+                <Anchor 
+                  href={tech.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
                 >
-                  <FloatingElement delay={tech.delay}>
-                    <ThemeIcon
-                      size="5rem"
-                      variant="light"
-                      sx={(theme) => ({
-                        width: theme.fn.size({ base: 100, sm: 60, md: 70 }),
-                        height: theme.fn.size({ base: 'auto' }),
-                        boxShadow: '0 0 20px rgba(0,145,255,0.3)',
-                        background: 'rgba(72, 82, 90, 0.1)',
-                        backdropFilter: 'blur(5px)',
-                      })}
-                    >
-                      <tech.icon
-                        size="4rem"
-                        style={{ color: '#0091FF' }}
-                      />
-                    </ThemeIcon>
-                  </FloatingElement>
-                </motion.div>
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.2,
+                      rotate: [0, -10, 10, 0], 
+                    }}
+                    transition={{ duration: 0.3 }}
+                    style={{ display: 'inline-block' }}
+                  >
+                    <FloatingElement delay={tech.delay}>
+                      <ThemeIcon
+                        size="5rem"
+                        variant="light"
+                        sx={(theme) => ({
+                          width: theme.fn.size({ base: 100, sm: 60, md: 70 }),
+                          height: theme.fn.size({ base: 'auto' }),
+                          boxShadow: '0 0 20px rgba(0,145,255,0.3)',
+                          background: 'rgba(72, 82, 90, 0.1)',
+                          backdropFilter: 'blur(5px)',
+                          cursor: 'pointer',
+                          '&:hover': {
+                            boxShadow: '0 0 30px rgba(0,145,255,0.5)',
+                          }
+                        })}
+                      >
+                        <tech.icon
+                          size="4rem"
+                          style={{ color: '#0091FF' }}
+                        />
+                      </ThemeIcon>
+                    </FloatingElement>
+                  </motion.div>
+                </Anchor>
               </Tooltip>
             ))}
           </Group>
