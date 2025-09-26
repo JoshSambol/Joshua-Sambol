@@ -36,7 +36,7 @@ const Projects = ({ itemVariants }) => {
     {
       title: "Jeopardy",
       description: "A React-based clone of the popular game show Jeopardy",
-      technologies: ["React", "Node.js", "JavaScript"],
+      technologies: ["React", "JavaScript"],
       link: "https://jeopardy.joshuasambol.com/"
     },
     {
@@ -44,6 +44,12 @@ const Projects = ({ itemVariants }) => {
       description: "A full stack React+Node.js application that lets you chat on a message board.",
       technologies: ["React", "Node.js", "JavaScript", "Express", "MongoDB"],
       link: "https://openboard.joshuasambol.com/"
+    },
+    {
+      title: "Support Jewish Uganda",
+      description: "A website created for a non-profit organization to help them raise money for their cause.",
+      technologies: ["React", "JavaScript", "Mantine", "Framer Motion"],
+      link: "https://sju.joshuasambol.com/"
     }
   ];
 
