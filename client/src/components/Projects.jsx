@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Box, Title, Grid, Card, Group, Text, Badge, Container, Stack } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import { IconExternalLink, IconCode, IconAward } from '@tabler/icons-react';
 import FloatingElement from './FloatingElement';
 
@@ -11,7 +12,8 @@ const Projects = ({ itemVariants }) => {
     link: "https://github.com/posaune14/yellow_team",
     featured: true,
     status: "In Development",
-    challenge: "Congressional App Challenge 2025"
+    challenge: "Congressional App Challenge 2025",
+    showOnMobile: true
   };
 
   const projects = [
@@ -19,37 +21,43 @@ const Projects = ({ itemVariants }) => {
       title: "The Coder Fair",
       description: "A full-stack React-based web application created to help organize and manage events for theCoderSchool(Montgomery, NJ)",
       technologies: ["React", "JavaScript", "Node.js", "Python"],
-      link: "https://coderfair.com"
+      link: "https://coderfair.com",
+      showOnMobile: true
     },
     {
       title: "Sunny Dayz", 
       description: "A web application that utilizes an API to fetch weather data for a specific location and display it to the user",
       technologies: ["HTML", "CSS", "JavaScript"],
-      link: "https://sunnydayz.joshuasambol.com"
+      link: "https://sunnydayz.joshuasambol.com",
+      showOnMobile: false
     },
     {
       title: "Select 100 Lacrosse",
       description: "A website created for a local lacrosse coach to help them manage their clients and events.",
       technologies: ["HTML", "CSS", "JavaScript"],
-      link: "https://select100lax.netlify.app/"
+      link: "https://select100lax.netlify.app/",
+      showOnMobile: true
     },
     {
       title: "Jeopardy",
       description: "A React-based clone of the popular game show Jeopardy",
       technologies: ["React", "JavaScript"],
-      link: "https://jeopardy.joshuasambol.com/"
+      link: "https://jeopardy.joshuasambol.com/",
+      showOnMobile: false
     },
     {
       title: "OpenBoard",
       description: "A full stack React+Node.js application that lets you chat on a message board.",
       technologies: ["React", "Node.js", "JavaScript", "Express", "MongoDB"],
-      link: "https://openboard.joshuasambol.com/"
+      link: "https://openboard.joshuasambol.com/",
+      showOnMobile: true
     },
     {
       title: "Support Jewish Uganda",
       description: "A website created for a non-profit organization to help them raise money for their cause.",
       technologies: ["React", "JavaScript", "Mantine", "Framer Motion"],
-      link: "https://sju.joshuasambol.com/"
+      link: "https://sju.joshuasambol.com/",
+      showOnMobile: true
     }
   ];
 
@@ -181,6 +189,12 @@ const Projects = ({ itemVariants }) => {
     </FloatingElement>
   );
 
+  const isMobile = useMediaQuery('(max-width: 48em)');
+  const filteredProjects = projects.filter((project) => !isMobile || project.showOnMobile);
+  const hiddenOnMobileCount = isMobile 
+    ? (projects.length - filteredProjects.length) + (featuredProject.showOnMobile ? 0 : 1)
+    : 0;
+
   return (
     <motion.div
       variants={itemVariants}
@@ -202,18 +216,26 @@ const Projects = ({ itemVariants }) => {
         </Title>
 
         {/* Featured Project */}
-        <Container size="lg" mb={40}>
-          <ProjectCard project={featuredProject} isFeatured={true} />
-        </Container>
+        {(!isMobile || featuredProject.showOnMobile) && (
+          <Container size="lg" mb={40}>
+            <ProjectCard project={featuredProject} isFeatured={true} />
+          </Container>
+        )}
 
         {/* Other Projects */}
         <Grid>
-          {projects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <Grid.Col key={project.title} span={{ base: 12, sm: 6, md: 4 }}>
               <ProjectCard project={project} isFeatured={false} />
             </Grid.Col>
           ))}
         </Grid>
+
+        {isMobile && hiddenOnMobileCount > 0 && (
+          <Text ta="center" c="dimmed" mt="md" size="sm">
+            More projects are available on larger screens.
+          </Text>
+        )}
       </Box>
     </motion.div>
   );
