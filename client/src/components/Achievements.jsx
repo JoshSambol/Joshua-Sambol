@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Text, Center, Box, Title, Stack, Badge, Grid, Card, Image } from '@mantine/core';
+import { Text, Center, Box, Title, Stack, Badge } from '@mantine/core';
 import { IconTrophy, IconAward, IconMedal } from '@tabler/icons-react';
 
 const Achievements = ({ itemVariants }) => {
@@ -33,10 +33,7 @@ const Achievements = ({ itemVariants }) => {
       color: "#CD7F32" // Bronze
     }
   ];
-  // Import all PNG images from the assets folder eagerly (excludes text.svg)
-  // Use import:'default' so values are direct URL strings
-  const imageModules = import.meta.glob('../assets/*.png', { eager: true, import: 'default' });
-  const images = Object.values(imageModules);
+  // Image gallery removed
 
   return (
     <motion.div 
@@ -130,45 +127,7 @@ const Achievements = ({ itemVariants }) => {
               </motion.div>
             ))}
           </Stack>
-          <Box style={{ marginTop: '2rem' }}>
-            <Grid gutter="md">
-              {images.map((src) => (
-                <Grid.Col key={src} span={{ base: 12, sm: 6 }}>
-                  <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                    <Card
-                      padding="xs"
-                      radius="md"
-                      shadow="sm"
-                      style={{
-                        background: 'rgba(255, 255, 255, 0.03)',
-                        border: '1px solid rgba(0,145,255,0.15)',
-                        overflow: 'hidden'
-                      }}
-                    >
-                      <Image
-                        src={src}
-                        alt="Achievement"
-                        radius="sm"
-                        style={{
-                          width: '100%',
-                          height: '220px',
-                          objectFit: 'cover',
-                          display: 'block'
-                        }}
-                      />
-                    </Card>
-                  </motion.div>
-                </Grid.Col>
-              ))}
-              {images.length === 0 && (
-                <Grid.Col span={12}>
-                  <Text c="dimmed" ta="center" size="sm">
-                    No images found in assets.
-                  </Text>
-                </Grid.Col>
-              )}
-            </Grid>
-          </Box>
+          {/* Image gallery removed */}
         </Box>
       </Center>
     </motion.div>
