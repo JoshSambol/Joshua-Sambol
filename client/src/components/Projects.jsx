@@ -13,12 +13,12 @@ const Projects = ({ itemVariants }) => {
     links: [
       { label: "GitHub", url: "https://github.com/posaune14/yellow_team" },
       { label: "Website", url: "https://pantrylink.joshuasambol.com" },
-      { label: "TestFlight", url: "https://testflight.apple.com/join/DYE46mt9" }
+      { label: "App Store", url: "https://apps.apple.com/us/app/pantrylink/id6754800608" }
     ],
     featured: true,
     status: "Production Phase",
     date: "October 2025",
-    challenge: "Congressional App Challenge 2025",
+    challenge: "Winner of Congressional App Challenge 2025",
     showOnMobile: true
   };
 
