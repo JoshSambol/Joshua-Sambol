@@ -1,97 +1,30 @@
-import { useState } from 'react'
-import './App.css'
-import { Container, Box } from '@mantine/core';
+import { Routes, Route } from 'react-router-dom';
+import { MantineProvider } from '@mantine/core';
+import { MotionConfig } from 'framer-motion';
 import '@mantine/core/styles.css';
-import { MantineProvider, createTheme } from '@mantine/core';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import './styles/global.css';
+import theme from './theme';
 
-// Import components
-import Header from './components/Header';
-import SubHeader from './components/SubHeader';
-import TechStack from './components/TechStack';
-import About from './components/About';
-import Projects from './components/Projects';
-import Achievements from './components/Achievements';
-import Contact from './components/Contact';
-
-const theme = createTheme({
-  colors: {
-    brand: [
-      '#E5F4FF',
-      '#CCE9FF',
-      '#99D3FF',
-      '#66BDFF',
-      '#33A7FF',
-      '#0091FF', // Primary
-      '#0073CC',
-      '#005699',
-      '#003A66',
-      '#001D33',
-    ],
-  },
-  primaryColor: 'brand',
-});
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Work from './pages/Work';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
 
 function App() {
-  const { scrollYProgress } = useScroll();
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [1, 0.95]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { 
-        duration: 0.8, 
-        staggerChildren: 0.3,
-        when: "beforeChildren" 
-      } 
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  };
-
   return (
     <MantineProvider theme={theme}>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        style={{ 
-          background: 'linear-gradient(135deg, #000510, #001D33)',
-          minHeight: '100vh',
-          color: 'white',
-          position: 'relative',
-          overflow: 'hidden'
-        }}
-      >
-        <motion.div
-          style={{
-            scale: scaleProgress
-          }}
-        >
-          <Container size="lg" py={100} style={{ position: 'relative', zIndex: 1 }}>
-            <Header itemVariants={itemVariants} />
-            <SubHeader itemVariants={itemVariants} />
-            <TechStack itemVariants={itemVariants} />
-            <Box mt={50}>
-              <About itemVariants={itemVariants} />
-            </Box>
-            <Projects itemVariants={itemVariants} />
-            <Achievements itemVariants={itemVariants} />
-            <Contact itemVariants={itemVariants} />
-          </Container>
-        </motion.div>
-        </motion.div>
+      <MotionConfig reducedMotion="user">
+        <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+      </MotionConfig>
     </MantineProvider>
   );
 }
