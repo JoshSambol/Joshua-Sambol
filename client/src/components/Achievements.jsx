@@ -1,57 +1,60 @@
 import { motion } from 'framer-motion';
 import { Text, Center, Box, Title, Stack, Badge } from '@mantine/core';
-import { IconTrophy, IconAward, IconMedal, IconFlagFilled, IconBrandApple, IconDeviceDesktop } from '@tabler/icons-react';
+import usCongressLogo from '../assets/US Congress.svg';
+import appleLogo from '../assets/Apple.png';
+import acslLogo from '../assets/ACSL.png';
+import coderSchoolLogo from '../assets/theCoderSchool.png';
 
 const Achievements = ({ itemVariants }) => {
   const achievements = [
     {
-      icon: IconFlagFilled,
-      title: "Congressional App Challenge Winner",
-      year: "2025",
-      description: "PantryLink was selected by Rep. Bonnie Watson Coleman as the winning app for NJ-12. Attended House of Code in Washington, D.C. to present the app.",
-      color: "#3C3B6E" // USA blue
-    },
-    {
-      icon: IconBrandApple,
+      icon: appleLogo,
       title: "Swift Student Challenge Winner",
       year: "2026",
       description: "WingFlow was selected by Apple Inc. as a winner of the prestigious Swift Student Challenge. Invited to attend Apple's 2026 WWDC in Cupertino.",
-      color: "#A2AAAD" // Apple silver
+      link: "https://developer.apple.com/swift-student-challenge/"
     },
     {
-      icon: IconDeviceDesktop,
+      icon: acslLogo,
       title: "American Computer Science League International Co-Champion",
       year: "2026",
       description: "Member of The Pennington School's ACSL team, which won international first place for the 4th year in a row.",
-      color: "#00C2FF" // Cyan
+      link: "https://www.acsl.org/"
     },
     {
-      icon: IconTrophy,
-      title: "Coder School Montgomery's Coder Pro Team",
-      year: "2024",
-      description: "Selected as a member of the elite Coder Pro Team",
-      color: "#FFD700" // Gold
+      icon: usCongressLogo,
+      title: "Congressional App Challenge Winner",
+      year: "2025",
+      description: "PantryLink was selected by Rep. Bonnie Watson Coleman as the winning app for NJ-12. Attended House of Code in Washington, D.C. to present the app.",
+      link: "https://www.congressionalappchallenge.us/"
     },
     {
-      icon: IconTrophy,
+      icon: coderSchoolLogo,
       title: "Coder School Montgomery's Coder Pro Team",
       year: "2025",
       description: "Selected as a member of the elite Coder Pro Team",
-      color: "#FFD700" // Gold
+      link: "https://www.thecoderschool.com/"
     },
     {
-      icon: IconAward,
+      icon: coderSchoolLogo,
+      title: "Coder School Montgomery's Coder Pro Team",
+      year: "2024",
+      description: "Selected as a member of the elite Coder Pro Team",
+      link: "https://www.thecoderschool.com/"
+    },
+    {
+      icon: coderSchoolLogo,
       title: "Coder School National App of the Month",
       year: "2023",
       description: "Recognized for outstanding application development",
-      color: "#C0C0C0" // Silver
+      link: "https://www.thecoderschool.com/"
     },
     {
-      icon: IconMedal,
+      icon: coderSchoolLogo,
       title: "Coder School Montgomery's App of the Season",
       year: "2023",
       description: "Awarded for exceptional seasonal project",
-      color: "#CD7F32" // Bronze
+      link: "https://www.thecoderschool.com/"
     }
   ];
   // Image gallery removed
@@ -99,6 +102,10 @@ const Achievements = ({ itemVariants }) => {
                 whileHover={{ scale: 1.02 }}
               >
                 <Box
+                  component="a"
+                  href={achievement.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     padding: '1.5rem',
                     borderRadius: '10px',
@@ -107,14 +114,20 @@ const Achievements = ({ itemVariants }) => {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '1.5rem',
+                    textDecoration: 'none',
+                    cursor: 'pointer',
                   }}
                 >
-                  <achievement.icon 
-                    size={40} 
-                    style={{ 
-                      color: achievement.color,
+                  <img
+                    src={achievement.icon}
+                    alt={achievement.title}
+                    style={{
+                      width: 40,
+                      height: 40,
+                      objectFit: 'contain',
+                      borderRadius: '6px',
                       filter: 'drop-shadow(0 0 10px rgba(0,145,255,0.3))'
-                    }} 
+                    }}
                   />
                   <div style={{ flex: 1 }}>
                     <Text 
