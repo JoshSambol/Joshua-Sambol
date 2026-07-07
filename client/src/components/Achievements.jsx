@@ -1,9 +1,30 @@
 import { motion } from 'framer-motion';
 import { Text, Center, Box, Title, Stack, Badge } from '@mantine/core';
-import { IconTrophy, IconAward, IconMedal } from '@tabler/icons-react';
+import { IconTrophy, IconAward, IconMedal, IconFlagFilled, IconBrandApple, IconDeviceDesktop } from '@tabler/icons-react';
 
 const Achievements = ({ itemVariants }) => {
   const achievements = [
+    {
+      icon: IconFlagFilled,
+      title: "Congressional App Challenge Winner",
+      year: "2025",
+      description: "PantryLink was selected by Rep. Bonnie Watson Coleman as the winning app for NJ-12. Attended House of Code in Washington, D.C. to present the app.",
+      color: "#3C3B6E" // USA blue
+    },
+    {
+      icon: IconBrandApple,
+      title: "Swift Student Challenge Winner",
+      year: "2026",
+      description: "WingFlow was selected by Apple Inc. as a winner of the prestigious Swift Student Challenge. Invited to attend Apple's 2026 WWDC in Cupertino.",
+      color: "#A2AAAD" // Apple silver
+    },
+    {
+      icon: IconDeviceDesktop,
+      title: "American Computer Science League International Co-Champion",
+      year: "2026",
+      description: "Member of The Pennington School's ACSL team, which won international first place for the 4th year in a row.",
+      color: "#00C2FF" // Cyan
+    },
     {
       icon: IconTrophy,
       title: "Coder School Montgomery's Coder Pro Team",

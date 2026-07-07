@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { Text, Center, Box, Group, Title, Anchor, TextInput, Textarea, Button, Stack } from '@mantine/core';
-import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedIn, IconMail } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 
 const Contact = ({ itemVariants }) => {
   const socialLinks = [
     { icon: IconBrandGithub, label: 'GitHub', link: 'https://github.com/joshsambol', username: '@joshsambol' },
     { icon: IconBrandInstagram, label: 'Instagram', link: 'https://instagram.com/josh.sambol', username: '@josh.sambol' },
-    { icon: IconBrandLinkedIn, label: 'LinkedIn', link: 'https://www.linkedin.com/in/joshua-sambol-a62a93387/', username: 'Joshua Sambol' },
-    { icon: IconMail, label: 'Email', link: 'mailto:Joshuasambol@pennington.org', username: 'Joshuasambol@pennington.org' },
+    { icon: IconBrandLinkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/joshua-sambol-a62a93387/', username: 'Joshua Sambol' },
+    { icon: IconMail, label: 'Email', link: 'mailto:jsambol.dev@gmail.com', username: 'jsambol.dev@gmail.com' },
   ];
 
   return (
