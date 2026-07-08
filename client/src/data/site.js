@@ -10,6 +10,7 @@ import {
   IconBrandCss3,
   IconBrandJavascript,
   IconBrandSwift,
+  IconBrandWordpress,
 } from '@tabler/icons-react';
 
 export const identity = {
@@ -35,6 +36,7 @@ export const techStack = [
   { icon: IconBrandReact, label: 'React', link: 'https://react.dev/' },
   { icon: IconBrandPython, label: 'Python', link: 'https://docs.python.org/3/' },
   { icon: IconBrandSwift, label: 'Swift', link: 'https://docs.swift.org/swift-book/' },
+  { icon: IconBrandWordpress, label: 'WordPress', link: 'https://wordpress.org/' },
 ];
 
 // Palette keys used to color-block cards. Cycled through in order.
