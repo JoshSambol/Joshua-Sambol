@@ -68,7 +68,7 @@ const Services = () => (
     </Section>
 
     {/* TESTIMONIAL */}
-    {/*GET RID OF TS FOR TESTIMONIAL
+    
     {testimonials.length > 0 && (
       <Section>
         <SectionHeading eyebrow="Kind words" title="Don't just take my word for it" />
@@ -77,7 +77,6 @@ const Services = () => (
         </div>
       </Section>
     )}
-*/}
 
     <Section>
       <CTA />

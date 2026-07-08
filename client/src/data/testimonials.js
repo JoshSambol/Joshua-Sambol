@@ -4,9 +4,9 @@
 export const testimonials = [
   {
     quote:
-      'Joshua completely understood what we needed and delivered a website that looks incredible and works flawlessly. He was easy to work with, quick, and genuinely cared about getting it right. I could not recommend him more.',
-    name: 'Your First Client',
-    role: 'Founder, (project name)',
+      'Josh is a highly skilled, engaging, and professional young entrepreneur and coder. I genuinely enjoyed working with him, and the site he created for me is exactly what I wanted. I will definitely turn to him again for future projects.',
+    name: 'Lori Weir',
+    role: 'Founder, L Weir Consulting; Former central banker and strategist',
     color: 'lavender',
   },
 ];
