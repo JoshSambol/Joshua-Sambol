@@ -3,10 +3,16 @@ import { motion } from 'framer-motion';
 import Section from '../components/Section';
 import Button from '../components/Button';
 import Sparkle from '../components/Sparkle';
+import Seo from '../components/Seo';
 import { socialLinks, identity } from '../data/site';
 
 const Contact = () => (
   <Section pad="clamp(48px, 8vw, 90px)" style={{ paddingTop: 'clamp(32px, 6vw, 60px)' }}>
+    <Seo
+      title="Contact | Hire a Web Developer in New Jersey, Joshua Sambol"
+      description="Get in touch to start a web design, web development, or iOS app project with Joshua Sambol, a freelance developer based in Princeton, NJ."
+      path="/contact"
+    />
     <div style={{ textAlign: 'center', position: 'relative', marginBottom: 48 }}>
       <Sparkle size={26} color="#fff" twinkle style={{ position: 'absolute', top: -6, left: '26%' }} />
       <div

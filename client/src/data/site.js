@@ -14,7 +14,7 @@ import {
 
 export const identity = {
   name: 'Joshua Sambol',
-  role: 'Web & App Developer',
+  role: 'Web Developer & iOS App Developer',
   tagline: 'I build bright, playful, genuinely useful things for the web.',
   intro:
     "I'm a full-stack developer who loves turning ideas into interactive apps people actually enjoy using. I specialize in fast, friendly front-ends, backed by real full-stack experience, and I take projects from first sketch all the way to launch.",

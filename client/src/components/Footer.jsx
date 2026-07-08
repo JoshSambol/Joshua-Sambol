@@ -23,7 +23,7 @@ const Footer = () => (
           <span style={{ color: 'var(--coral-deep)' }}>.</span>
         </div>
         <p className="text-soft" style={{ margin: '4px 0 0', fontSize: '0.9rem' }}>
-          {identity.role} · Building bright things on the web.
+          {identity.role} · Serving Princeton, NJ & the Jersey Shore.
         </p>
       </div>
 

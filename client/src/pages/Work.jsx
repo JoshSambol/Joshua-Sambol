@@ -5,6 +5,7 @@ import ProjectCard from '../components/ProjectCard';
 import AchievementRow from '../components/AchievementRow';
 import Sparkle from '../components/Sparkle';
 import CTA from '../components/CTA';
+import Seo from '../components/Seo';
 import { projects } from '../data/projects';
 import { achievements } from '../data/achievements';
 import { colorForIndex } from '../lib/palette';
@@ -31,6 +32,11 @@ const Stat = ({ n, label, color }) => (
 
 const Work = () => (
   <>
+    <Seo
+      title="Projects & Achievements | Joshua Sambol, NJ Web & iOS Developer"
+      description="Browse projects and awards from Joshua Sambol, a web developer and iOS app developer in Princeton, NJ, from award-winning iOS apps to client websites across New Jersey."
+      path="/work"
+    />
     <Section pad="clamp(48px, 8vw, 90px)" style={{ paddingTop: 'clamp(32px, 6vw, 60px)' }}>
       <div style={{ textAlign: 'center', position: 'relative' }}>
         <Sparkle size={24} color="#fff" twinkle style={{ position: 'absolute', top: 0, left: '20%' }} />
@@ -52,8 +58,8 @@ const Work = () => (
           Everything I&apos;ve <span className="accent-word">built</span>.
         </h1>
         <p className="text-soft" style={{ fontSize: '1.15rem', lineHeight: 1.6, maxWidth: 600, margin: '20px auto 0' }}>
-          A running log of my projects and the recognition they&apos;ve earned along the way — from first experiments to
-          shipped apps.
+          A running log of my projects and the recognition they&apos;ve earned along the way, from first experiments to
+          shipped apps, built as a web and iOS developer based in New Jersey.
         </p>
 
         <motion.div

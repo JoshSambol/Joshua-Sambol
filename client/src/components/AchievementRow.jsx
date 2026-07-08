@@ -38,7 +38,7 @@ const AchievementRow = ({ item, color = 'lavender', index = 0 }) => {
           justifyContent: 'center',
         }}
       >
-        <img src={item.icon} alt="" style={{ width: 34, height: 34, objectFit: 'contain' }} />
+        <img src={item.icon} alt={`${item.title} logo`} style={{ width: 34, height: 34, objectFit: 'contain' }} />
       </div>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>

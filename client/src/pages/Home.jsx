@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
 import Sparkle from '../components/Sparkle';
+import Seo from '../components/Seo';
 import ProjectCard from '../components/ProjectCard';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -26,6 +27,11 @@ const wordVariants = {
 
 const Home = () => (
   <>
+    <Seo
+      title="Joshua Sambol | Web Developer, Web Designer & iOS App Developer in Princeton, NJ"
+      description="Freelance web developer and iOS app developer based in Princeton, NJ. I design and build fast, playful websites, web apps, and iOS apps for clients across New Jersey and the Jersey Shore."
+      path="/"
+    />
     {/* ---------------- HERO ---------------- */}
     <Section pad="clamp(56px, 9vw, 120px)" style={{ paddingTop: 'clamp(40px, 7vw, 80px)' }}>
       <div style={{ textAlign: 'center', position: 'relative' }}>
@@ -79,7 +85,8 @@ const Home = () => (
           style={{ fontSize: 'clamp(1.05rem, 2.4vw, 1.35rem)', lineHeight: 1.6, maxWidth: 620, margin: '24px auto 0' }}
         >
           {identity.tagline} I&apos;m a full-stack developer taking on freelance websites, web apps, and iOS apps,
-          from first sketch to launch.
+          from first sketch to launch. Based in Princeton, NJ, I work with clients across New Jersey and the Jersey
+          Shore.
         </motion.p>
 
         <motion.div
@@ -112,6 +119,7 @@ const Home = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 title={t.label}
+                aria-label={t.label}
                 whileHover={{ y: -6, rotate: [0, -8, 8, 0] }}
                 style={{
                   width: 56,

@@ -5,11 +5,17 @@ import ProcessStep from '../components/ProcessStep';
 import TestimonialCard from '../components/TestimonialCard';
 import Sparkle from '../components/Sparkle';
 import CTA from '../components/CTA';
+import Seo from '../components/Seo';
 import { services, process } from '../data/services';
 import { testimonials } from '../data/testimonials';
 
 const Services = () => (
   <>
+    <Seo
+      title="Web Design & App Development Services | Joshua Sambol, Princeton NJ"
+      description="Hire a freelance web designer and developer in New Jersey. I build marketing websites, web apps, and iOS apps for businesses from Princeton to the Jersey Shore."
+      path="/services"
+    />
     <Section pad="clamp(48px, 8vw, 90px)" style={{ paddingTop: 'clamp(32px, 6vw, 60px)' }}>
       <div style={{ textAlign: 'center', position: 'relative' }}>
         <Sparkle size={26} color="#fff" twinkle style={{ position: 'absolute', top: 0, right: '22%' }} />
@@ -31,7 +37,8 @@ const Services = () => (
         </h1>
         <p className="text-soft" style={{ fontSize: '1.15rem', lineHeight: 1.6, maxWidth: 620, margin: '20px auto 0' }}>
           I help businesses, non-profits, and people with big ideas turn them into polished, fast, delightful software.
-          Here&apos;s what I do and how working together goes.
+          I work with clients throughout New Jersey, from Princeton to the Jersey Shore. Here&apos;s what I do and how
+          working together goes.
         </p>
       </div>
     </Section>
