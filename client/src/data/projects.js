@@ -72,7 +72,7 @@ export const projects = [
     date: 'Nov 2025',
     sort: 98,
     showPreview: true,
-    featured: true,
+    featured: false,
   },
   {
     title: 'L Weir Consulting',

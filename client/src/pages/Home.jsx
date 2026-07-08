@@ -167,13 +167,7 @@ const Home = () => (
         </Link>
       </div>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: 24,
-        }}
-      >
+      <div className="featured-grid" style={{ gap: 24 }}>
         {featuredProjects.map((p, i) => (
           <ProjectCard key={p.title} project={p} color={colorForIndex(i)} />
         ))}
